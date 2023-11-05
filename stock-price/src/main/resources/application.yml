@@ -1,0 +1,33 @@
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: akash
+    password: akash208
+  
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+
+  application:
+    name: STOCK-API
+
+  boot:
+    admin:
+      client:
+        url: http://localhost:9911/
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
